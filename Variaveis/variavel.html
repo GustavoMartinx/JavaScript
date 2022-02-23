@@ -1,0 +1,42 @@
+<!--
+    Variáveis  =>  Nomes simbólicos para receber algum valor
+        Atálhos de código
+        Identificadores
+
+    palavras reservadas para criar uma variável:
+        *var
+        *let
+        *const
+
+    Scope:  Determina a visibilidade de alguma variável no JS
+-->
+
+<script>
+    
+    // var   (hoisting)
+    // funciona em escopo global; em todo o código; independente do bloco
+    var clima = "Quente"
+    clima = "Frio"
+    console.log(clima)
+
+
+    // let
+    // funciona apenas dentro do escopo em que está inserido
+    if (true) {
+        let a = 10
+    }
+    console.log(a) //erro: como se esse 'a' estivesse indefinido
+
+    if (true) {
+        let b = 42
+        console.log(b) //funciona, pois, estão no mesmo escopo
+    }
+
+
+    // const
+    // seu valor não pode ser alterado durante a execução do código
+    const clima2 = "quente"
+    clima2 = "frio"
+    console.log(clima2) //erro: foi atribuido um novo valor a clima2
+
+</script>
