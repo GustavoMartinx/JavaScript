@@ -1,2 +1,2 @@
-# Basic Javascript
+# Basic JavaScript
 Learning JS fundamentals 📜✨
