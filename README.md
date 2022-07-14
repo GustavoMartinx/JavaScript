@@ -1,2 +1,2 @@
-# Basic_Javascript
-Learning JS fundamentals
+# Basic Javascript
+Learning JS fundamentals 📜✨
