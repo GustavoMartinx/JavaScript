@@ -6,7 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <script src="./data_types/arrays.js"></script>
+<body onload="load()">
+    <script src="./functions.js"></script>
+
+    <!-- <script>  // tudo que estiver dentro da tag script será interpretado como js
+                    // everything inside the script tag will be interpreted as js
+            alert("aeeowww \o/");
+        </script>   -->
+        <h1>New Page</h1>
+        <button type="button" onclick="clicked()" >click here</button>
+        <p id="github_button" onclick="redirect()"></p>
+        <p id="mouse_move" onmouseover="change(this)" onmouseout="back(this)">mouse over here</p>
+        
+        <select onchange="funct_change(this)">
+            <option value="1">value 1</option>
+            <option value="2">value 2</option>
+            <option value="3">value 3</option>
+        </select>
+
 </body>
 </html>
