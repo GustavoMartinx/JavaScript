@@ -70,3 +70,38 @@ var user = {
 // same result
 console.log(user.say_hello('Mari'));
 console.log(user.say_hello_abstracted('Mari'));
+// --------------------------------------------
+
+// Assignin a variable to the object
+var p_name = 'Mari';
+var fav_book = 'Little Red Riding Hood';
+
+var people = {
+    name: p_name,
+    fav_book: fav_book,
+    // or
+    p_name,
+    fav_book
+};
+// -------------------------------------------
+
+// Merging Objects
+var tourist = {
+    name: 'Ana',
+    age: 17
+};
+
+var extra_info = {
+    coutry: 'Brazil',
+    state: 'Sao Paulo'
+};
+
+var new_user = Object.assign({}, tourist, extra_info);  // first param is the object target
+console.log(new_user);
+
+// Spreading
+var new_tourist = {
+    ...tourist,
+    ...extra_info
+};
+console.log(new_tourist);
