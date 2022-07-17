@@ -105,3 +105,10 @@ var new_tourist = {
     ...extra_info
 };
 console.log(new_tourist);
+// -----------------------
+
+var variable_name = 'Country';
+var user2 =  {
+    name: 'Gustavo',
+    [variable_name]: 'Brazil' // variable value is the property name
+}
