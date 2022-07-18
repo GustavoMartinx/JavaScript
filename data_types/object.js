@@ -17,10 +17,6 @@
 
 */
 
-
-
-// review
-
 const person = {
     name: 'Mariana',
     age: 17,
@@ -33,7 +29,6 @@ console.log(`A ${person.name} tem só ${person.age} anos e já pesa ${person.wei
 
 // Print the object
 console.log(person);
-
 // or your values
 console.log(person.name);
 console.log(person.age);
@@ -105,7 +100,56 @@ var new_tourist = {
     ...extra_info
 };
 console.log(new_tourist);
-// -----------------------
+// --------------------------
+
+// Getters and Setters
+var users = [
+    {
+        name: 'Gustavo',
+        age: '18'
+    },
+    {
+        name: 'Mari',
+        age: '18'
+        
+    },
+    {
+        name: 'Ana',
+        age: '20'
+        
+    }
+]
+
+var other_user = {
+    position: 0,
+    get current() {   // get pegar retornar. Na chamada, tratar como property e não como function() 
+        return users[this.position];
+    },
+    set current(position) {  //  set definir. Na chamada, tratar como assignment
+        this.position = position;
+    },
+    next() {
+        ++this.position;
+    },
+    previous() {
+        --this.position;
+    }
+}
+
+console.log(other_user.current);  // { name: 'Gustavo', age: '18' }
+
+other_user.next();
+console.log(other_user.current);  // { name: 'Mari', age: '18' }
+
+other_user.next();
+console.log(other_user.current);  // { name: 'Ana', age: '20' }
+
+other_user.previous();
+console.log(other_user.current);  // { name: 'Mari', age: '18' }
+
+other_user.current = 0;
+console.log(other_user.current);  // { name: 'Gustavp', age: '18' }
+// -----------------------------
 
 var variable_name = 'Country';
 var user2 =  {
