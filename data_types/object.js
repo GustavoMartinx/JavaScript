@@ -168,3 +168,60 @@ console.log(weight);
 // and assing this property to a variable with different name
 var { itsTheLoveOfMyLife: honey } = person;
 console.log(honey);
+// ---------------------
+
+// Nesting
+var dev = {
+    name: {
+        first: 'Gustavo'
+    }
+};
+
+// from the outside in
+// de fora p dentro
+var { name: { first } } = dev;
+console.log(first);
+
+// Property created
+var { name: { least = 'Martins' } } = dev;  // value default to fallback. If defined in object, htan this will not overwrite
+console.log(least);
+// ---------------------
+
+// Passing specific properties of an object to the function
+var user_function = {
+    name: 'Gustavo',
+    height: '1,75',
+    eyes_color: 'Borwn'
+};
+
+function print_user({ name, height}) {
+    console.log(name);
+    console.log(height);
+}
+
+print_user(user_function);
+
+// show each propertys of the object
+console.log(Object.keys(user_function));
+
+// show each values of the object
+console.log(Object.values(user_function));
+
+// Looping through all properties with a normal for loop
+var props = Object.keys(user_function);
+
+for(var i = 0; i < props.length; i++) {
+   console.log(props[i]);  // percorrendo o array props (chaves)
+   console.log(user_function[props[i]]); // pegando todos os valores de cada chave
+}
+// with a for of
+for(var prop of props) {
+    console.log(user_function[prop]);
+
+}
+// and with for in
+for(var prop2 in user_function) {
+    if(user_function.hasOwnProperty(prop2)) {  // hasOwnProperty to ensure that iteration does not consider properties that are not of that object (inheritance, for example)
+        console.log(user_function[prop2]);
+    }
+}
