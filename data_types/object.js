@@ -148,11 +148,23 @@ other_user.previous();
 console.log(other_user.current);  // { name: 'Mari', age: '18' }
 
 other_user.current = 0;
-console.log(other_user.current);  // { name: 'Gustavp', age: '18' }
+console.log(other_user.current);  // { name: 'Gustavo', age: '18' }
 // -----------------------------
 
 var variable_name = 'Country';
 var user2 =  {
     name: 'Gustavo',
-    [variable_name]: 'Brazil' // variable value is the property name
+    [variable_name]: 'Brazil'  // variable value is the property name
 }
+// -----------------------------
+
+// Extracting from object x (person) an property z (weight) 
+var nome = person.name;
+console.log(nome);
+
+var { weight } = person;
+console.log(weight);
+
+// and assing this property to a variable with different name
+var { itsTheLoveOfMyLife: honey } = person;
+console.log(honey);
